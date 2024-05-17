@@ -5,7 +5,7 @@ import math
 # todays date
 today = datetime.datetime.now().strftime("%B %d, %Y").upper()
 
-def generate_work_ticket(job_info,fixture_info):
+def generate_quote(job_info,fixture_info,floors,bath_count,bathrooms):
 
     # traps
     first_floor_trap = fixture_info['base_trap_price']
@@ -14,7 +14,8 @@ def generate_work_ticket(job_info,fixture_info):
 
     # Create workbook and sheet
     # workbook = xlsxwriter.Workbook(fr'/Users/paulwilliams/Work/test_folder/{job_info['builder'].upper()}/QUOTES/{job_info['plan'].upper()}.xlsx')
-    workbook = xlsxwriter.Workbook(fr'C:\Users\Paul.Williams\Stancil Services\Quan Estimating - Documents\General\{job_info['builder'].upper()}\QUOTES\{job_info['plan'].upper()}.xlsx')
+    # workbook = xlsxwriter.Workbook(fr'C:\Users\Paul.Williams\Stancil Services\Quan Estimating - Documents\General\{job_info['builder'].upper()}\QUOTES\{job_info['plan'].upper()}.xlsx')
+    workbook = xlsxwriter.Workbook(fr'C:\Users\Paul.Williams\OneDrive - Stancil Services\Documents\Projects\TEST\ESTIMATING\{fixture_info['name'].upper(())}\QUOTES\{job_info['plan'].upper()}.xlsx')
     worksheet = workbook.add_worksheet()
 
     # format worksheet
@@ -100,6 +101,7 @@ def generate_work_ticket(job_info,fixture_info):
 
     worksheet.write('B15',1,quantity)
     worksheet.write('C15','TRAP')
+
     if floors[0]['kitchen'] == 'FIRST':
         worksheet.write('D15',first_floor_trap,num_format)
     elif floors[0]['kitchen'] == 'SECOND':
@@ -228,7 +230,7 @@ def generate_work_ticket(job_info,fixture_info):
                 
             # tub and shower
             elif bathrooms[i]['clean']['tubshower'] == 'Tub':
-                if bathrooms[i]['clean']['walls'] == '':
+                if bathrooms[i]['clean']['walls'] == 'tub only':
                     # tub only
                     worksheet.write(f'B{line}',1,quantity)
                     worksheet.write(f'C{line}',f'{fixture_info['bath']['brand'].upper()} {bathrooms[i]['clean']['size']} WHITE SLIDE-IN TUB ONLY')
