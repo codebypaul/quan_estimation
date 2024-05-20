@@ -7,8 +7,10 @@ bathroom = {
     "pedestal":"",
     "clean": {
         "tubshower":"",
-        "unit":"",
-        "size":""
+        "type":"",
+        "brand":"",
+        "walls":"",
+        "size":"",
         },
     }
 
@@ -48,70 +50,51 @@ walls = input("Will walls be included? Y/N\n").upper()
 
 if clean == 1:
     bathroom["clean"]["tubshower"] = "Tub"
-    if walls == 'N':
-        clean = int(input('What type of of tub will this bathroom get?\n1 - Slide-In\n2 - Garden\n3 - Drop-In\n4 - Freestanding\n'))
-
-        if clean == 1:
-            bathroom["clean"]["type"] = 'slide-in'
-        elif clean == 2:
-            bathroom["clean"]["type"] = 'garden'
-        elif clean == 3:
-            bathroom["clean"]["type"] = 'drop-in'
-        elif clean == 4:
-            bathroom["clean"]["type"] = 'freestanding'
-
-    elif walls == "Y":
+    clean = int(input('What type of of tub will this bathroom get?\n1 - Slide-In\n2 - Garden\n3 - Drop-In\n4 - Freestanding\n'))
+    if walls == 'N' and clean == 1:
+        bathroom["clean"]["type"] = 'slide-in'
+        bathroom['clean']['walls'] = 'tile walls'
+    elif walls == 'N' and clean == 2:
+        bathroom["clean"]["type"] = 'garden'
+        bathroom['clean']['walls'] = 'tile walls'
+    elif walls == 'N' and clean == 3:
+        bathroom["clean"]["type"] = 'drop-in'
+    elif walls == 'N' and clean == 4:
+        bathroom["clean"]["type"] = 'freestanding'
+    
+    if walls == "Y":
         clean = int(input("What type of walled tub unit will this bathroom get"))
         if clean == 1:
             bathroom["clean"]["walls"] = 'separate walls'
+
         elif clean == 2:
             bathroom["clean"]["walls"] = 'one-piece unit'
 
 elif clean == 2:
     bathroom["clean"]["tubshower"] = "Shower"
-    clean = int(input())
     if walls == 'N':
         walls = int(input('1 - Full Tile Shower\n2 - Base w/ Tile Walls\n'))
         if walls == 1:
-            bathroom["clean"]["type"] =
+            bathroom["clean"]["type"] = 'full tile shower'
         elif walls == 2:
-            if walls = int(input('1 - Sterling\n2 - Florestone or Mustee\n'))
-            bathroom["clean"]["type"] =
+            walls = int(input('What brand will the shower base be?\n1 - Sterling\n2 - Florestone or Mustee\n'))
+            bathroom['clean']['type'] = 'base w/ tile walls'
+            bathroom["clean"]["walls"] = 'tile walls'
+            if walls == 1:
+                bathroom['clean']['brand'] = 'Sterling'
+            elif walls == 2:
+                bathroom['clean']['brand'] = 'Florestone or Mustee'
+
 
     elif walls == 'Y':
+        walls = int(input(f'What type of walls will this {bathroom['clean']['tubshower']} have?\n1 - Separate Walls\n2 - Attached (One Piece)\n'))
+        if walls == 1:
+            bathroom["clean"]["walls"] = "w/ separate walls"
+            
+        elif walls == 2:
+            bathroom["clean"]["type"] = "one-piece unit"
 
-        
-
-    elif walls == 'Y':
-
-elif bathroom['clean']['tubshower'] == "Shower":
-    # no walls no base
-
-    # base only
-        # sterling
-        # florestone / mustee
-    # shower unit
-        # separate walls
-        # one-piece unit
-        # built in seat
-
-# if bathroom['clean']['tubshower'] == "Tub":
-#     if walls == "Y":
-#         if wall_type == 1:
-#             bathroom["clean"]["walls"] = "w/ separate walls"
-#         elif wall_type == 2:
-#             bathroom["clean"]["walls"] = "one-piece unit"
-#         elif wall_type == 3:
-#             bathroom["clean"]["walls"] = "w/ seat and separate walls"
-#     elif walls == "N":
-#         if wall_type == 1:
-#             bathroom["clean"]["walls"] = "shower base w/ tile walls"
-#         elif wall_type == 2:
-#             bathroom["clean"]["walls"] = "tile walls"
-# elif bathroom['clean']['tubshower'] == "Shower":
-#     if walls == "Y":
-#         if wall_type == 1:
-#             bathroom["clean"]["walls"] = "w/ separate walls"
-#         elif wall_type == 2:
-#             bathroom["clean"]["walls"] = "one-piece unit"
-#     elif walls == "N":
+print(f"Tub/Shower : {bathroom['clean']['tubshower']}")
+print(f"Type : {bathroom['clean']['type']}")
+print(f"Walls : {bathroom['clean']['walls']}")             
+print(f"Brand : {bathroom['clean']['brand']}")        
