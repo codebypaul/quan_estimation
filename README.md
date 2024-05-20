@@ -25,8 +25,8 @@ Materials list
 #### Tubs
 - Slide in tub 60x30: $15
 - Sterling garden tub: $25
-- Sterling tub / shower unit: $30
-- Sterling traverse tub / shower unit : $50
+- Sterling tub / shower unit: $30 *
+- Sterling traverse tub / shower unit : $50 *
 - Wall mounted tub filler w/ valve: $175
 - Floor mounted tub filler w/ valve: $250
 - Free standing tub (Acrylic): $700
@@ -34,21 +34,22 @@ Materials list
 #### Showers
 - Sterling shower base: $15
 - Florestone or Mustee Shower Base : $20
-- Sterling shower unit: $30
-- Sterling traverse shower unit : $50
-- Oasis Tub or Shower Unit : $50
+- Sterling shower unit: $30 *
+- Sterling traverse shower unit : $50 *
+- Oasis Tub or Shower Unit : $50 *
 - Separate diverter : $100
-- Shower valve with built in diverter : $100
+- Shower valve with built in diverter : $100 *
 - Second standard shower valve : $275
 - Hand shower w/ slide bar : $150
 - Hand shower w/ holder : $125
-- Body Sprayers (each) : $125
+- Body Sprayers (each) : $125 *
 - Ceiling Mount Rainhead : $150
 
 ### Kitchen
 - 2-Hole Kitchen Faucet : $15
 - Garbage disposal : $25
 - Pot filler : $285
+- 3-Hole/ 8" CC Kitchen/ Bridge Faucet : $25
 
 ### Laundry
 - Drop in laundry sink : $25
