@@ -44,12 +44,14 @@ Materials list
 - Hand shower w/ holder : $125
 - Body Sprayers (each) : $125 *
 - Ceiling Mount Rainhead : $150
+- Shower column : $185
 
 ### Kitchen
 - 2-Hole Kitchen Faucet : $15
 - Garbage disposal : $25
 - Pot filler : $285
 - 3-Hole/ 8" CC Kitchen/ Bridge Faucet : $25
+- Air switch : $
 
 ### Laundry
 - Drop in laundry sink : $25
