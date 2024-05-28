@@ -83,7 +83,7 @@ class Misc(models.Model):
     category = models.CharField(null=True,blank=True)
     brand = models.CharField(null=True,blank=True)
     description = models.CharField(null=True,blank=True)
-    price = models.IntegerField(null=True,blank=True)
+    price = models.FloatField(null=True,blank=True)
 
 # Labor
 class Labor(models.Model):
