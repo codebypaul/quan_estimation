@@ -92,9 +92,7 @@ fixture_info = {
         'water_line':30
     },
 }
-first_floor_trap = fixture_info['base_trap_price']
-second_floor_trap = first_floor_trap+15
-third_floor_trap = second_floor_trap+5
+
 
 def general_info():
     global fixture_info
@@ -166,6 +164,10 @@ def general_info():
     else:
         fixture_info['other']['water_heater_location'] = input('Where is the water heater located?\n')
 
+first_floor_trap = fixture_info['base_trap_price']
+second_floor_trap = first_floor_trap+15
+third_floor_trap = second_floor_trap+5
+
 def bath_info(baths):
     for i in range(bath_count):
         bathroom = {
@@ -177,7 +179,8 @@ def bath_info(baths):
         "pedestal":"",
         "clean": {
             "tubshower":"",
-            "size":""
+            "size":"",
+            "walls":""
             },
         }
         bathroom["name"] = input("What is the name of this bathroom?\n")
@@ -239,6 +242,8 @@ def bath_info(baths):
 # community = input('What is the name of this community?')
 # plan = input('What is the name of this plan?')
 
+
+
 general_info()
 bath_info(bath_count)
 job_info = {
@@ -246,4 +251,4 @@ job_info = {
     'plan':project_name,
 }
 generate_quote(job_info,fixture_info,floors,bath_count,bathrooms)
-generate_materials_list(job_info)
+# generate_materials_list(job_info)

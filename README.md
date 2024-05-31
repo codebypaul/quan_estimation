@@ -20,6 +20,8 @@ Materials list
 - 8" CC : $20
 - Deck Mounted Tub Filler : $25
 - Pedestal Lavatory: $25
+- Soap dispenser : $15
+
 
 ### Tubs / Showers
 #### Tubs
@@ -40,7 +42,7 @@ Materials list
 - Separate diverter : $100
 - Shower valve with built in diverter : $100 *
 - Second standard shower valve : $275
-- Hand shower w/ slide bar : $150
+- Hand shower w/ slide bar : $175
 - Hand shower w/ holder : $125
 - Body Sprayers (each) : $125 *
 - Ceiling Mount Rainhead : $150
@@ -51,7 +53,8 @@ Materials list
 - Garbage disposal : $25
 - Pot filler : $285
 - 3-Hole/ 8" CC Kitchen/ Bridge Faucet : $25
-- Air switch : $
+- Air switch : $25
+- Touch Kitchen Faucet (.65 markup) : $15
 
 ### Laundry
 - Drop in laundry sink : $25

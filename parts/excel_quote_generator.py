@@ -14,8 +14,8 @@ def generate_quote(job_info,fixture_info,floors,bath_count,bathrooms):
 
     # Create workbook and sheet
     # workbook = xlsxwriter.Workbook(fr'/Users/paulwilliams/Work/test_folder/{job_info['builder'].upper()}/QUOTES/{job_info['plan'].upper()}.xlsx')
-    # workbook = xlsxwriter.Workbook(fr'C:\Users\Paul.Williams\Stancil Services\Quan Estimating - Documents\General\{job_info['builder'].upper()}\QUOTES\{job_info['plan'].upper()}.xlsx')
-    workbook = xlsxwriter.Workbook(fr'C:\Users\Paul.Williams\OneDrive - Stancil Services\Documents\Projects\TEST\ESTIMATING\{fixture_info['name'].upper(())}\QUOTES\{job_info['plan'].upper()}.xlsx')
+    workbook = xlsxwriter.Workbook(fr'C:\Users\Paul.Williams\Stancil Services\Quan Estimating - Documents\General\{fixture_info['name'].upper()}\QUOTES\{job_info['plan'].upper()}.xlsx')
+    # workbook = xlsxwriter.Workbook(fr'C:\Users\Paul.Williams\OneDrive - Stancil Services\Documents\Projects\TEST\ESTIMATING\{fixture_info['name'].upper()}\QUOTES\{job_info['plan'].upper()}.xlsx')
     worksheet = workbook.add_worksheet()
 
     # format worksheet
@@ -121,7 +121,7 @@ def generate_quote(job_info,fixture_info,floors,bath_count,bathrooms):
 
         # toilet
         worksheet.write(f'B{line}',1,quantity)
-        worksheet.write(f'C{line}',f'{fixture_info['bath']['closet']['closet']} WHITE CLOSET')
+        worksheet.write(f'C{line}',f'{fixture_info['bath']['closet']['closet'].upper()} WHITE CLOSET')
         worksheet.write(f'D{line}',f'=((({fixture_info['bath']['closet']['closet_bowl_cost']}+{fixture_info['bath']['closet']['closet_tank_cost']})*1.04)*1.07)/{fixture_info['markup']}',num_format)
         worksheet.write(f'E{line}',f'=B{line}*D{line}',num_format)
         line +=1
@@ -446,13 +446,5 @@ def generate_quote(job_info,fixture_info,floors,bath_count,bathrooms):
 
     workbook.close()
 
-    # Builder
-    print(f'material_list_generator {job_info['builder']}')
-
-    # Community
-    print(f'material_list_generator {job_info['community']}')
-
-    # Plan
-    print(f'material_list_generator {job_info['plan']}\n')
 
  

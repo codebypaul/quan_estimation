@@ -11,7 +11,7 @@ red_cedar = {
         'kitchen_color':'Chrome',
         'kitchen_faucet_mod_num':'67315C',
         'kitchen_faucet_price':319.25,
-        'garbage_disposal':'BADGER 1 DISPOSAL 1/3 HP WITH CORD - 78990-ISE',
+        'garbage_disposal':'BADGER 1 DISPOSAL 1/3 HP WITH CORD - 79880A-ISE',
         'garbage_disposal_price':85,
 
     },
@@ -735,3 +735,81 @@ chandler_construction = {
     },
 }
 builders.append(chandler_construction) # 9
+
+mungo_homes = {
+    'name':'Mungo Homes',
+    'fixt_brand':'Delta',
+    'markup':.75,
+    'base_trap_price':470,
+    'house_color':'Chrome',
+    'kitchen':{
+        'kitchen_coll':'Foundations',
+        'kitchen_color':'Chrome',
+        'kitchen_faucet_mod_num':'B4310LF',
+        'kitchen_faucet_price':271.6,
+        'garbage_disposal':'BADGER 1 DISPOSAL 1/3 HP WITH CORD - 79880A-ISE',
+        'garbage_disposal_price':85,
+
+    },
+    'bath':{
+        'bath_coll':'Foundations',
+        'brand':'Sterling',
+        'closet':{
+            'closet':'Gerber Maxwell GWS20912',
+            'closet_bowl':'21-962 WHITE ELONGATED BOWL',
+            'closet_bowl_cost':63.26,
+            'closet_tank':'28-990 WHITE TANK',
+            'closet_tank_cost':31.69,
+            'closet_seat':'WHITE ELONGATED CLOSET SEAT',
+            'closet_seat_cost':15.23,
+        },
+        'lavatory':{
+            'pedestal_lav':'Gerber Maxwell G0022504',
+            'ped_lav_bowl':'12-504 4" CC Petite Bowl',
+            'ped_lav_bowl_cost':52.979,
+            'ped_lav_leg':'29-842 Pedestal Leg',
+            'ped_lav_leg_cost':28.367,
+            'lav_faucet_mod_num':'B2510LF-PPU 4" CC',
+            'lav_faucet_price':111.3,
+        },
+        'shower':{
+            'shower_coll':'Medley',
+            'shower_base':'7233100-0',
+            'shower_base_cost':235.88,
+            'shower_back_wall':'72432100-0',
+            'shower_back_wall_cost':136.76,
+            'shower_end_wall':'72405100-0',
+            'shower_end_wall_cost':230.29,
+            'shower_wall_set':'71164100-0',
+            'shower_wall_set_cost':345,
+
+            'shower_valve':'R10000-PFX-PX',
+            'shower_valve_price':87.95,
+            'shower_trim_mod_num':'BT13210',
+            'shower_trim_cost':87.25,
+        },
+        'ts':{
+            'ts_coll':'Medley',
+            'tub':'71171112 OR 22',
+            'tub_cost':219.82,
+            'tub_walls':'71374100',
+            'tub_walls_cost':239.78,
+
+            'ts_valve':'R10000-PFT-PX',
+            'ts_valve_price':168.65,
+            'ts_trim_mod_num':'BT13410',
+            'ts_trim_cost':124.15
+        },
+        'strainer_overflow_color':'Chrome',
+        'strainer_overflow_price':24,
+    },
+    'other':{
+        'water_heater':'STATE 50-GALLON EN650DORT ELECTRIC WATER HEATER',
+        'water_heater_cost':425,
+        'water_heater_labor':100,
+        'water_heater_location':'',
+        'sewer_line':30,
+        'water_line':30
+    },
+}
+builders.append(mungo_homes) # 10
