@@ -40,11 +40,11 @@ class Delta(models.Model):
     list_price = models.FloatField()
 
 # China Tubs and Showers
-class ChinaTubShower(models.Model):
+class ChinaParts(models.Model):
     model_number = models.CharField(primary_key=True)
     material_type = models.CharField()
     brand = models.CharField()
-    collection = models.CharField()
+    collection = models.CharField(null=True,blank=True)
     description = models.CharField(null=True, blank=True)
     baker_mitchell = models.FloatField(null=True, blank=True)
     cregger = models.FloatField(null=True, blank=True)
@@ -53,7 +53,41 @@ class ChinaTubShower(models.Model):
     hubbard = models.FloatField(null=True, blank=True)
     hughes = models.FloatField(null=True, blank=True)
 
+# Combination Pricing
+# class TubsShower(models.Model):
+#     model_number = models.CharField(primary_key=True)
+#     brand = models.CharField()
+#     description = models.CharField()
+#     base = models.ForeignKey(ChinaParts,on_delete=models.DO_NOTHING)
+#     back_wall = models.ForeignKey(ChinaParts,on_delete=models.DO_NOTHING)
+#     end_walls = models.ForeignKey(ChinaParts,on_delete=models.DO_NOTHING)
+#     wall_set = models.ForeignKey(ChinaParts,on_delete=models.DO_NOTHING)
+
+# class Toilet(models.Model):
+#     model_number = models.CharField(primary_key=True)
+#     brand = models.CharField()
+#     description = models.CharField()
+#     bowl = models.ForeignKey(ChinaParts,on_delete=models.DO_NOTHING)
+#     tank = models.ForeignKey(ChinaParts,on_delete=models.DO_NOTHING)
+
+# class Lavatory(models.Model):
+#     model_number = models.CharField(primary_key=True)
+#     brand = models.CharField()
+#     description = models.CharField()
+#     bowl = models.ForeignKey(ChinaParts,on_delete=models.DO_NOTHING)
+#     leg = models.ForeignKey(ChinaParts,on_delete=models.DO_NOTHING)
+
 # Misc
 class Misc(models.Model):
     model_number = models.CharField(primary_key=True)
+    category = models.CharField(null=True,blank=True)
     brand = models.CharField(null=True,blank=True)
+    description = models.CharField(null=True,blank=True)
+    price = models.FloatField(null=True,blank=True)
+
+# Labor
+class Labor(models.Model):
+    category = models.CharField()
+    description = models.CharField(null=True, blank=True)
+    location = models.CharField(null=True, blank=True)
+    price = models.IntegerField()
