@@ -64,6 +64,7 @@ fixture_info = {
             'shower_back_wall_cost':238.72,
             'shower_end_wall':'72405100-0',
             'shower_end_wall_cost':141.77,
+
             'shower_valve':'FP62325PF',
             'shower_valve_price':161.3,
             'shower_trim_mod_num':'TL182',
@@ -75,6 +76,7 @@ fixture_info = {
             'tub_cost':226.52,
             'tub_walls':'71374100',
             'tub_walls_cost':243.29,
+
             'ts_valve':'FP62380PF',
             'ts_valve_price':168.65,
             'ts_trim_mod_num':'TL183',
@@ -168,7 +170,7 @@ first_floor_trap = fixture_info['base_trap_price']
 second_floor_trap = first_floor_trap+15
 third_floor_trap = second_floor_trap+5
 
-def bath_info(baths):
+def bath_info(baths,fixture_info):
     for i in range(bath_count):
         bathroom = {
         "name": "",
@@ -183,6 +185,7 @@ def bath_info(baths):
             "walls":""
             },
         }
+
         bathroom["name"] = input("What is the name of this bathroom?\n")
         bathroom["floor"] = input('What floor is this bathroom on?\n')
         if bathroom['name'].upper() == 'POWDER ROOM':
@@ -205,33 +208,34 @@ def bath_info(baths):
             elif walls == "N":
                 wall_type = int(input(f'What type of walls will this {bathroom['clean']['tubshower']} have?\n1 - Shower Base w/ Tile Walls\n2 - Full Tile Shower\n'))
 
-            # if bathroom['clean']['tubshower'] == "Shower":
-            #     if walls == "Y":
-            #         if wall_type == 1:
-            #             bathroom["clean"]["walls"] = "w/ separate walls"
-            #         elif wall_type == 2:
-            #             bathroom["clean"]["walls"] = "one-piece unit"
-            #         elif wall_type == 3:
-            #             bathroom["clean"]["walls"] = "w/ seat and separate walls"
-            #     elif walls == "N":
-            #         if wall_type == 1:
-            #             bathroom["clean"]["walls"] = "shower base w/ tile walls"
-            #         elif wall_type == 2:
-            #             bathroom["clean"]["walls"] = "tile walls"
-            # elif bathroom['clean']['tubshower'] == "Shower":
-            #     if walls == "Y":
-            #         if wall_type == 1:
-            #             bathroom["clean"]["walls"] = "w/ separate walls"
-            #         elif wall_type == 2:
-            #             bathroom["clean"]["walls"] = "one-piece unit"
-            #     elif walls == "N":
+            if bathroom['clean']['tubshower'] == "Shower":
+                if walls == "Y":
+                    if wall_type == 1:
+                        bathroom["clean"]["walls"] = "w/ separate walls"
+                    elif wall_type == 2:
+                        bathroom["clean"]["walls"] = "one-piece unit"
+                    elif wall_type == 3:
+                        bathroom["clean"]["walls"] = "w/ seat and separate walls"
+                elif walls == "N":
+                    if wall_type == 1:
+                        bathroom["clean"]["walls"] = "shower base w/ tile walls"
+                    elif wall_type == 2:
+                        bathroom["clean"]["walls"] = "tile walls"
+            elif bathroom['clean']['tubshower'] == "Tub":
+                if walls == "Y":
+                    if wall_type == 1:
+                        bathroom["clean"]["walls"] = "w/ separate walls"
+                    elif wall_type == 2:
+                        bathroom["clean"]["walls"] = "one-piece unit"
+                elif walls == 'N':
+                    bathroom['clean']['walls'] = 'tile walls'
 
         if bathroom['floor'].upper() == "FIRST":
-            bathroom['trap_cost'] = first_floor_trap
+            bathroom['trap_cost'] = fixture_info['base_trap_price']
         elif bathroom['floor'].upper() == "SECOND":
-            bathroom['trap_cost'] = second_floor_trap
+            bathroom['trap_cost'] = fixture_info['base_trap_price']+15
         else:
-            bathroom['trap_cost'] = third_floor_trap
+            bathroom['trap_cost'] = fixture_info['base_trap_price']+20
 
         bathrooms.append(bathroom)
 
@@ -245,10 +249,11 @@ def bath_info(baths):
 
 
 general_info()
-bath_info(bath_count)
+bath_info(bath_count,fixture_info)
 job_info = {
     'community':community,
     'plan':project_name,
 }
+
 generate_quote(job_info,fixture_info,floors,bath_count,bathrooms)
 # generate_materials_list(job_info)

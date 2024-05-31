@@ -796,7 +796,7 @@ mungo_homes = {
             'tub_walls_cost':239.78,
 
             'ts_valve':'R10000-PFT-PX',
-            'ts_valve_price':168.65,
+            'ts_valve_price':94.7,
             'ts_trim_mod_num':'BT13410',
             'ts_trim_cost':124.15
         },

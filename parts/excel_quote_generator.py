@@ -6,7 +6,6 @@ import math
 today = datetime.datetime.now().strftime("%B %d, %Y").upper()
 
 def generate_quote(job_info,fixture_info,floors,bath_count,bathrooms):
-
     # traps
     first_floor_trap = fixture_info['base_trap_price']
     second_floor_trap = first_floor_trap+15
@@ -142,7 +141,6 @@ def generate_quote(job_info,fixture_info,floors,bath_count,bathrooms):
         line +=1
 
         if bathrooms[i]["traps"] >= 3:
-
             # lavatory(ies)
             # if two lavatories
             if bathrooms[i]['lavatories'] == 2:
@@ -166,111 +164,111 @@ def generate_quote(job_info,fixture_info,floors,bath_count,bathrooms):
 
             
 
-            # shower
-            if bathrooms[i]['clean']['tubshower'] == 'Shower':
-                # shower units
-                if bathrooms[i]['clean']['walls'] == 'w/ separate walls':
-                    # separate walls
-                    worksheet.write(f'B{line}',1,quantity)
-                    worksheet.write(f'C{line}',f'{fixture_info['bath']['brand'].upper()} {fixture_info['bath']['shower']['shower_coll'].upper()} {fixture_info['bath']['shower']['shower_base']}/{fixture_info['bath']['shower']['shower_back_wall']}/{fixture_info['bath']['shower']['shower_end_wall']}')
-                    worksheet.write(f'D{line}',f'=(((({fixture_info['bath']['shower']['shower_base_cost']}+{fixture_info['bath']['shower']['shower_back_wall_cost']}+{fixture_info['bath']['shower']['shower_end_wall_cost']})*1.04)*1.07)/{fixture_info['markup']})+30',num_format)
-                    worksheet.write(f'E{line}',f'=B{line}*D{line}',num_format)
-                    line +=1
-                    worksheet.write(f'C{line}',f'{bathrooms[i]['clean']['size']} WHITE SHOWER UNIT',sub_item)
-                    line +=1
-
-                elif bathrooms[i]['clean']['walls'] == 'one-piece unit':
-                    # one piece
-                    worksheet.write(f'B{line}',1,quantity)
-                    worksheet.write(f'C{line}',f'{fixture_info['bath']['brand'].upper()} {fixture_info['bath']['shower']['shower_base']} {bathrooms[i]['clean']['size']} WHITE SHOWER UNIT')
-                    worksheet.write(f'D{line}',f'=((({fixture_info['bath']['shower']['shower_base_cost']}*1.04)*1.07)/{fixture_info['markup']})+50',num_format)
-                    worksheet.write(f'E{line}',f'=B{line}*D{line}',num_format)
-                    line +=1
-
-                elif bathrooms[i]['clean']['walls'] == 'w/ seat and separate walls':
-                    # separate walls w/ seat
-                    worksheet.write(f'B{line}',1,quantity)
-                    worksheet.write(f'C{line}',f'{fixture_info['bath']['brand'].upper()} {fixture_info['bath']['shower']['shower_coll'].upper()} {fixture_info['bath']['shower']['shower_base']}/{fixture_info['bath']['shower']['shower_wall_set']}')
-                    worksheet.write(f'D{line}',f'=(((({fixture_info['bath']['shower']['shower_base_cost']}+{fixture_info['bath']['shower']['shower_wall_set_cost']})*1.04)*1.07)/{fixture_info['markup']})+30',num_format)
-                    worksheet.write(f'E{line}',f'=B{line}*D{line}',num_format)
-                    line +=1
-                    worksheet.write(f'C{line}',f'{bathrooms[i]['clean']['size']} WHITE SHOWER UNIT W/ SEAT',sub_item)
-                    line +=1
-
-                elif bathrooms[i]['clean']['walls'] == 'shower base w/ tile walls':
-                    # shower base only
-                    worksheet.write(f'B{line}',1,quantity)
-                    worksheet.write(f'C{line}',f'{fixture_info['bath']['brand'].upper()} {fixture_info['bath']['shower']['shower_coll'].upper()} {fixture_info['bath']['shower']['shower_base']} {bathrooms[i]['clean']['size']} WHITE SHOWER BASE ONLY')
-                    worksheet.write(f'D{line}',f'=((({fixture_info['bath']['shower']['shower_base_cost']}*1.04)*1.07)/{fixture_info['markup']})+15',num_format)
-                    worksheet.write(f'E{line}',f'=B{line}*D{line}',num_format)
-                    line +=1
-
-                elif bathrooms[i]['clean']['walls'] == 'tile walls':
-                    # tile shower
-                    worksheet.write(f'B{line}',1,quantity)
-                    worksheet.write(f'C{line}',f'TILE SHOWER - BY OTHERS')
-                    worksheet.write(f'D{line}',100,num_format)
-                    worksheet.write(f'E{line}',f'=B{line}*D{line}',num_format)
-                    line +=1
-
-                # shower valve and trim
+        # shower
+        if bathrooms[i]['clean']['tubshower'] == 'Shower':
+            # shower units
+            if bathrooms[i]['clean']['walls'] == 'w/ separate walls':
+                # separate walls
                 worksheet.write(f'B{line}',1,quantity)
-                worksheet.write(f'C{line}',f'{fixture_info['fixt_brand'].upper()} SHOWER VALVE AND TRIM')
-                worksheet.write(f'D{line}',f'=(((161.3+{fixture_info['bath']['shower']['shower_trim_cost']})*.55)*1.07)/{fixture_info['markup']}',num_format)
+                worksheet.write(f'C{line}',f'{fixture_info['bath']['brand'].upper()} {fixture_info['bath']['shower']['shower_coll'].upper()} {fixture_info['bath']['shower']['shower_base']}/{fixture_info['bath']['shower']['shower_back_wall']}/{fixture_info['bath']['shower']['shower_end_wall']}')
+                worksheet.write(f'D{line}',f'=(((({fixture_info['bath']['shower']['shower_base_cost']}+{fixture_info['bath']['shower']['shower_back_wall_cost']}+{fixture_info['bath']['shower']['shower_end_wall_cost']})*1.04)*1.07)/{fixture_info['markup']})+30',num_format)
+                worksheet.write(f'E{line}',f'=B{line}*D{line}',num_format)
+                line +=1
+                worksheet.write(f'C{line}',f'{bathrooms[i]['clean']['size']} WHITE SHOWER UNIT',sub_item)
+                line +=1
+
+            elif bathrooms[i]['clean']['walls'] == 'one-piece unit':
+                # one piece
+                worksheet.write(f'B{line}',1,quantity)
+                worksheet.write(f'C{line}',f'{fixture_info['bath']['brand'].upper()} {fixture_info['bath']['shower']['shower_base']} {bathrooms[i]['clean']['size']} WHITE SHOWER UNIT')
+                worksheet.write(f'D{line}',f'=((({fixture_info['bath']['shower']['shower_base_cost']}*1.04)*1.07)/{fixture_info['markup']})+50',num_format)
                 worksheet.write(f'E{line}',f'=B{line}*D{line}',num_format)
                 line +=1
 
-                # valve
-                worksheet.write(f'C{line}',f'(1) {fixture_info['bath']['shower']['shower_valve']} ROUGH SHOWER VALVE',sub_item)
+            elif bathrooms[i]['clean']['walls'] == 'w/ seat and separate walls':
+                # separate walls w/ seat
+                worksheet.write(f'B{line}',1,quantity)
+                worksheet.write(f'C{line}',f'{fixture_info['bath']['brand'].upper()} {fixture_info['bath']['shower']['shower_coll'].upper()} {fixture_info['bath']['shower']['shower_base']}/{fixture_info['bath']['shower']['shower_wall_set']}')
+                worksheet.write(f'D{line}',f'=(((({fixture_info['bath']['shower']['shower_base_cost']}+{fixture_info['bath']['shower']['shower_wall_set_cost']})*1.04)*1.07)/{fixture_info['markup']})+30',num_format)
+                worksheet.write(f'E{line}',f'=B{line}*D{line}',num_format)
+                line +=1
+                worksheet.write(f'C{line}',f'{bathrooms[i]['clean']['size']} WHITE SHOWER UNIT W/ SEAT',sub_item)
                 line +=1
 
-                # trim
-                worksheet.write(f'C{line}',f'(1) {fixture_info['bath']['shower']['shower_trim_mod_num']} SHOWER TRIM',sub_item)
+            elif bathrooms[i]['clean']['walls'] == 'shower base w/ tile walls':
+                # shower base only
+                worksheet.write(f'B{line}',1,quantity)
+                worksheet.write(f'C{line}',f'{fixture_info['bath']['brand'].upper()} {fixture_info['bath']['shower']['shower_coll'].upper()} {fixture_info['bath']['shower']['shower_base']} {bathrooms[i]['clean']['size']} WHITE SHOWER BASE ONLY')
+                worksheet.write(f'D{line}',f'=((({fixture_info['bath']['shower']['shower_base_cost']}*1.04)*1.07)/{fixture_info['markup']})+15',num_format)
+                worksheet.write(f'E{line}',f'=B{line}*D{line}',num_format)
+                line +=1
+
+            elif bathrooms[i]['clean']['walls'] == 'tile walls':
+                # tile shower
+                worksheet.write(f'B{line}',1,quantity)
+                worksheet.write(f'C{line}',f'TILE SHOWER - BY OTHERS')
+                worksheet.write(f'D{line}',100,num_format)
+                worksheet.write(f'E{line}',f'=B{line}*D{line}',num_format)
+                line +=1
+
+            # shower valve and trim
+            worksheet.write(f'B{line}',1,quantity)
+            worksheet.write(f'C{line}',f'{fixture_info['fixt_brand'].upper()} SHOWER VALVE AND TRIM')
+            worksheet.write(f'D{line}',f'=((({fixture_info['bath']['shower']['shower_valve_price']}+{fixture_info['bath']['shower']['shower_trim_cost']})*.55)*1.07)/{fixture_info['markup']}',num_format)
+            worksheet.write(f'E{line}',f'=B{line}*D{line}',num_format)
+            line +=1
+
+            # valve
+            worksheet.write(f'C{line}',f'(1) {fixture_info['bath']['shower']['shower_valve']} ROUGH SHOWER VALVE',sub_item)
+            line +=1
+
+            # trim
+            worksheet.write(f'C{line}',f'(1) {fixture_info['bath']['shower']['shower_trim_mod_num']} SHOWER TRIM',sub_item)
+            line +=1
+            
+        # tub and shower
+        elif bathrooms[i]['clean']['tubshower'] == 'Tub':
+            if bathrooms[i]['clean']['walls'] == 'tub only':
+                # tub only
+                worksheet.write(f'B{line}',1,quantity)
+                worksheet.write(f'C{line}',f'{fixture_info['bath']['brand'].upper()} {bathrooms[i]['clean']['size']} WHITE SLIDE-IN TUB ONLY')
+                worksheet.write(f'D{line}',1,num_format)
+                worksheet.write(f'E{line}',f'=B{line}*D{line}',num_format)
                 line +=1
                 
-            # tub and shower
-            elif bathrooms[i]['clean']['tubshower'] == 'Tub':
-                if bathrooms[i]['clean']['walls'] == 'tub only':
-                    # tub only
-                    worksheet.write(f'B{line}',1,quantity)
-                    worksheet.write(f'C{line}',f'{fixture_info['bath']['brand'].upper()} {bathrooms[i]['clean']['size']} WHITE SLIDE-IN TUB ONLY')
-                    worksheet.write(f'D{line}',1,num_format)
-                    worksheet.write(f'E{line}',f'=B{line}*D{line}',num_format)
-                    line +=1
-                    
 
-                elif bathrooms[i]['clean']['walls'] == 'w/ separate walls':
-                    # tub and shower w/ walls
-                    worksheet.write(f'B{line}',1,quantity)
-                    worksheet.write(f'C{line}',f'{fixture_info['bath']['brand'].upper()} {fixture_info['bath']['ts']['ts_coll'].upper()} {fixture_info['bath']['ts']['tub']}-0/{fixture_info['bath']['ts']['tub_walls']}')
-                    worksheet.write(f'D{line}',f'=(((({fixture_info['bath']['ts']['tub_cost']}+{fixture_info['bath']['ts']['tub_walls_cost']})*1.04)*1.07)/{fixture_info['markup']})+30',num_format)
-                    worksheet.write(f'E{line}',f'=B{line}*D{line}',num_format)
-                    line +=1
-                    worksheet.write(f'C{line}',f'WHITE T&S UNIT',sub_item)
-                    line +=1
-
-                elif bathrooms[i]['clean']['walls'] == 'one-piece unit':
-                    # one piece
-                    worksheet.write(f'B{line}',1,quantity)
-                    worksheet.write(f'C{line}',f'{fixture_info['bath']['brand'].upper()} {fixture_info['bath']['ts']['tub']} WHITE ONE PIECE T/S UNIT')
-                    worksheet.write(f'D{line}',f'=((({fixture_info['bath']['ts']['tub_cost']}*1.04)*1.07)/{fixture_info['markup']})+50',num_format)
-                    worksheet.write(f'E{line}',f'=B{line}*D{line}',num_format)
-                    line +=1
-
-                # tub and shower valve and trim
+            elif bathrooms[i]['clean']['walls'] == 'w/ separate walls':
+                # tub and shower w/ walls
                 worksheet.write(f'B{line}',1,quantity)
-                worksheet.write(f'C{line}',f'{fixture_info['fixt_brand'].upper()} T&S VALVE AND TRIM')
-                worksheet.write(f'D{line}',f'=(((168.65+{fixture_info['bath']['ts']['ts_trim_cost']})*.55)*1.07)/{fixture_info['markup']}',num_format)
+                worksheet.write(f'C{line}',f'{fixture_info['bath']['brand'].upper()} {fixture_info['bath']['ts']['ts_coll'].upper()} {fixture_info['bath']['ts']['tub']}-0/{fixture_info['bath']['ts']['tub_walls']}')
+                worksheet.write(f'D{line}',f'=(((({fixture_info['bath']['ts']['tub_cost']}+{fixture_info['bath']['ts']['tub_walls_cost']})*1.04)*1.07)/{fixture_info['markup']})+30',num_format)
+                worksheet.write(f'E{line}',f'=B{line}*D{line}',num_format)
+                line +=1
+                worksheet.write(f'C{line}',f'WHITE T&S UNIT',sub_item)
+                line +=1
+
+            elif bathrooms[i]['clean']['walls'] == 'one-piece unit':
+                # one piece
+                worksheet.write(f'B{line}',1,quantity)
+                worksheet.write(f'C{line}',f'{fixture_info['bath']['brand'].upper()} {fixture_info['bath']['ts']['tub']} WHITE ONE PIECE T/S UNIT')
+                worksheet.write(f'D{line}',f'=((({fixture_info['bath']['ts']['tub_cost']}*1.04)*1.07)/{fixture_info['markup']})+50',num_format)
                 worksheet.write(f'E{line}',f'=B{line}*D{line}',num_format)
                 line +=1
 
-                # valve
-                worksheet.write(f'C{line}',f'(1) {fixture_info['bath']['ts']['ts_valve']} ROUGH TUB AND SHOWER VALVE',sub_item)
-                line+=1
+            # tub and shower valve and trim
+            worksheet.write(f'B{line}',1,quantity)
+            worksheet.write(f'C{line}',f'{fixture_info['fixt_brand'].upper()} T&S VALVE AND TRIM')
+            worksheet.write(f'D{line}',f'=((({fixture_info['bath']['ts']['ts_valve_price']}+{fixture_info['bath']['ts']['ts_trim_cost']})*.55)*1.07)/{fixture_info['markup']}',num_format)
+            worksheet.write(f'E{line}',f'=B{line}*D{line}',num_format)
+            line +=1
 
-                # trim
-                worksheet.write(f'C{line}',f'(1) {fixture_info['bath']['ts']['ts_trim_mod_num']} T&S TRIM',sub_item)
-                line +=1   
+            # valve
+            worksheet.write(f'C{line}',f'(1) {fixture_info['bath']['ts']['ts_valve']} ROUGH TUB AND SHOWER VALVE',sub_item)
+            line+=1
+
+            # trim
+            worksheet.write(f'C{line}',f'(1) {fixture_info['bath']['ts']['ts_trim_mod_num']} T&S TRIM',sub_item)
+            line +=1   
 
             # colored shower strainer / waste and overflow
             if fixture_info['house_color'] != 'Chrome' :
@@ -287,12 +285,12 @@ def generate_quote(job_info,fixture_info,floors,bath_count,bathrooms):
                     worksheet.write(f'E{line}',f'=B{line}*D{line}',num_format)
                     line +=1
 
-            # traps
-            worksheet.write(f'B{line}',bathrooms[i]['traps'],quantity)
-            worksheet.write(f'C{line}','TRAPS')
-            worksheet.write(f'D{line}',bathrooms[i]['trap_cost'],num_format)
-            worksheet.write(f'E{line}',f'=B{line}*D{line}',num_format)
-            line+=3
+        # traps
+        worksheet.write(f'B{line}',bathrooms[i]['traps'],quantity)
+        worksheet.write(f'C{line}','TRAPS')
+        worksheet.write(f'D{line}',bathrooms[i]['trap_cost'],num_format)
+        worksheet.write(f'E{line}',f'=B{line}*D{line}',num_format)
+        line+=3
 
         else:
             # lavatory
