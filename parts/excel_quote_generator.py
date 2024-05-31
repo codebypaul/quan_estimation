@@ -285,13 +285,6 @@ def generate_quote(job_info,fixture_info,floors,bath_count,bathrooms):
                     worksheet.write(f'E{line}',f'=B{line}*D{line}',num_format)
                     line +=1
 
-        # traps
-        worksheet.write(f'B{line}',bathrooms[i]['traps'],quantity)
-        worksheet.write(f'C{line}','TRAPS')
-        worksheet.write(f'D{line}',bathrooms[i]['trap_cost'],num_format)
-        worksheet.write(f'E{line}',f'=B{line}*D{line}',num_format)
-        line+=3
-
         else:
             # lavatory
             # if pedestal
@@ -318,12 +311,12 @@ def generate_quote(job_info,fixture_info,floors,bath_count,bathrooms):
             worksheet.write(f'E{line}',f'=B{line}*D{line}',num_format)
             line +=1
 
-            # traps
-            worksheet.write(f'B{line}',bathrooms[i]['traps'],quantity)
-            worksheet.write(f'C{line}','TRAPS')
-            worksheet.write(f'D{line}',bathrooms[i]['trap_cost'],num_format)
-            worksheet.write(f'E{line}',f'=B{line}*D{line}',num_format)
-            line+=3
+        # traps
+        worksheet.write(f'B{line}',bathrooms[i]['traps'],quantity)
+        worksheet.write(f'C{line}','TRAPS')
+        worksheet.write(f'D{line}',bathrooms[i]['trap_cost'],num_format)
+        worksheet.write(f'E{line}',f'=B{line}*D{line}',num_format)
+        line+=3
 
     # laundry room
     worksheet.write(f'B{line}',f'LAUNDRY ROOM - {floors[1]['laundry']} FLOOR',room_title)
