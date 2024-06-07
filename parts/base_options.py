@@ -783,7 +783,7 @@ mungo_homes = {
             'shower_wall_set':'71164100-0',
             'shower_wall_set_cost':345,
 
-            'shower_valve':'R10000-PFX-PX',
+            'shower_valve':'R10000-PFS-PX',
             'shower_valve_price':87.95,
             'shower_trim_mod_num':'BT13210',
             'shower_trim_cost':87.25,
@@ -813,3 +813,160 @@ mungo_homes = {
     },
 }
 builders.append(mungo_homes) # 10
+
+# Zora
+tricor = {
+    'name':'Tricor',
+    'fixt_brand':'Delta',
+    'markup':.7,
+    'base_trap_price':480,
+    'house_color':'Stainless',
+    'kitchen':{
+        'kitchen_coll':'Essa',
+        'kitchen_color':'Chrome',
+        'kitchen_faucet_mod_num':'9113-AR-DST',
+        'kitchen_faucet_price':444.35,
+        'garbage_disposal':'MOEN DISPOSAL 1/3 HP WITH CORD - GXP33C',
+        'garbage_disposal_price':69.52,
+
+    },
+    'bath':{
+        'bath_coll':'Modern',
+        'brand':'Sterling',
+        'closet':{
+            'closet':'Gerber Maxwell GWS20912',
+            'closet_bowl':'21-962 WHITE ELONGATED BOWL',
+            'closet_bowl_cost':63.26,
+            'closet_tank':'28-990 WHITE TANK',
+            'closet_tank_cost':31.69,
+            'closet_seat':'WHITE ELONGATED CLOSET SEAT',
+            'closet_seat_cost':15.23,
+        },
+        'lavatory':{
+            'pedestal_lav':'Gerber Maxwell G0022504',
+            'ped_lav_bowl':'12-504 4" CC Petite Bowl',
+            'ped_lav_bowl_cost':52.979,
+            'ped_lav_leg':'29-842 Pedestal Leg',
+            'ped_lav_leg_cost':28.367,
+            'lav_faucet_mod_num':'567LF-SSPP SINGLE HOLE',
+            'lav_faucet_price':267.35
+            ,
+        },
+        'shower':{
+            'shower_coll':'Medley',
+            'shower_base':'72331100-0',
+            'shower_base_cost':235.88,
+            'shower_back_wall':'72432100-0',
+            'shower_back_wall_cost':136.76,
+            'shower_end_wall':'72405100-0',
+            'shower_end_wall_cost':230.29,
+            'shower_wall_set':'71164100-0',
+            'shower_wall_set_cost':345,
+
+            'shower_valve':'R10000-PFS-PX',
+            'shower_valve_price':87.95,
+            'shower_trim_mod_num':'T14267-SS-PP',
+            'shower_trim_cost':204.65,
+        },
+        'ts':{
+            'ts_coll':'Medley',
+            'tub':'71171112 OR 22',
+            'tub_cost':219.82,
+            'tub_walls':'71374100',
+            'tub_walls_cost':239.78,
+
+            'ts_valve':'R10000-PFT-PX',
+            'ts_valve_price':94.7,
+            'ts_trim_mod_num':'T14467-SS-PP',
+            'ts_trim_cost':253.6
+        },
+        'strainer_overflow_color':'Stainless',
+        'strainer_overflow_price':21.5,
+    },
+    'other':{
+        'water_heater':'STATE 50-GALLON EN650DORT ELECTRIC WATER HEATER',
+        'water_heater_cost':425,
+        'water_heater_labor':100,
+        'water_heater_location':'',
+        'sewer_line':30,
+        'water_line':30
+    },
+}
+# Miranda
+# tricor = {
+#     'name':'Tricor',
+#     'fixt_brand':'Delta',
+#     'markup':.7,
+#     'base_trap_price':480,
+#     'house_color':'Stainless',
+#     'kitchen':{
+#         'kitchen_coll':'Essa',
+#         'kitchen_color':'Chrome',
+#         'kitchen_faucet_mod_num':'9113-AR-DST',
+#         'kitchen_faucet_price':444.35,
+#         'garbage_disposal':'MOEN DISPOSAL 1/3 HP WITH CORD - GXP33C',
+#         'garbage_disposal_price':69.52,
+
+#     },
+#     'bath':{
+#         'bath_coll':'Foundations and Woodhurst',
+#         'brand':'Sterling',
+#         'closet':{
+#             'closet':'Gerber Maxwell GWS20912',
+#             'closet_bowl':'21-962 WHITE ELONGATED BOWL',
+#             'closet_bowl_cost':63.26,
+#             'closet_tank':'28-990 WHITE TANK',
+#             'closet_tank_cost':31.69,
+#             'closet_seat':'WHITE ELONGATED CLOSET SEAT',
+#             'closet_seat_cost':15.23,
+#         },
+#         'lavatory':{
+#             'pedestal_lav':'Gerber Maxwell G0022504',
+#             'ped_lav_bowl':'12-504 4" CC Petite Bowl',
+#             'ped_lav_bowl_cost':52.979,
+#             'ped_lav_leg':'29-842 Pedestal Leg',
+#             'ped_lav_leg_cost':28.367,
+#             'lav_faucet_mod_num':'2532LF-SSMPU 4" CC',
+#             'lav_faucet_price':194.45,
+#         },
+#         'shower':{
+#             'shower_coll':'Medley',
+#             'shower_base':'7233100-0',
+#             'shower_base_cost':235.88,
+#             'shower_back_wall':'72432100-0',
+#             'shower_back_wall_cost':136.76,
+#             'shower_end_wall':'72405100-0',
+#             'shower_end_wall_cost':230.29,
+#             'shower_wall_set':'71164100-0',
+#             'shower_wall_set_cost':345,
+
+#             'shower_valve':'R10000-PFS-PX',
+#             'shower_valve_price':87.95,
+#             'shower_trim_mod_num':'BT13210',
+#             'shower_trim_cost':87.25,
+#         },
+#         'ts':{
+#             'ts_coll':'Medley',
+#             'tub':'71171112 OR 22',
+#             'tub_cost':219.82,
+#             'tub_walls':'71374100',
+#             'tub_walls_cost':239.78,
+
+#             'ts_valve':'R10000-PFT-PX',
+#             'ts_valve_price':94.7,
+#             'ts_trim_mod_num':'BT13410',
+#             'ts_trim_cost':124.15
+#         },
+#         'strainer_overflow_color':'Brushed Nickel',
+#         'strainer_overflow_price':21.5,
+#     },
+#     'other':{
+#         'water_heater':'STATE 50-GALLON EN650DORT ELECTRIC WATER HEATER',
+#         'water_heater_cost':425,
+#         'water_heater_labor':100,
+#         'water_heater_location':'',
+#         'sewer_line':30,
+#         'water_line':30
+#     },
+# }
+builders.append(tricor) # 11

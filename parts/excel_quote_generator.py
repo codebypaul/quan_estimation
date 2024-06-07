@@ -270,22 +270,22 @@ def generate_quote(job_info,fixture_info,floors,bath_count,bathrooms):
             worksheet.write(f'C{line}',f'(1) {fixture_info['bath']['ts']['ts_trim_mod_num']} T&S TRIM',sub_item)
             line +=1   
 
-            # colored shower strainer / waste and overflow
-            if fixture_info['house_color'] != 'Chrome' :
-                if bathrooms[i]['clean']['tubshower'] == 'Shower':
-                    worksheet.write(f'B{line}',1,quantity)
-                    worksheet.write(f'C{line}',f'{fixture_info['bath']['strainer_overflow_color'].upper()} SHOWER STRAINER')
-                    worksheet.write(f'D{line}',f'=({fixture_info['bath']['strainer_overflow_price']}*1.07)/.6',num_format)
-                    worksheet.write(f'E{line}',f'=B{line}*D{line}',num_format)
-                    line +=1
-                else:
-                    worksheet.write(f'B{line}',1,quantity)
-                    worksheet.write(f'C{line}',f'{fixture_info['bath']['strainer_overflow_color'].upper()} WASTE AND OVERFLOW')
-                    worksheet.write(f'D{line}',f'=({fixture_info['bath']['strainer_overflow_price']}*1.07)/.6',num_format)
-                    worksheet.write(f'E{line}',f'=B{line}*D{line}',num_format)
-                    line +=1
+        # colored shower strainer / waste and overflow
+        if fixture_info['house_color'] != 'Chrome' :
+            if bathrooms[i]['clean']['tubshower'] == 'Shower':
+                worksheet.write(f'B{line}',1,quantity)
+                worksheet.write(f'C{line}',f'{fixture_info['bath']['strainer_overflow_color'].upper()} SHOWER STRAINER')
+                worksheet.write(f'D{line}',f'=({fixture_info['bath']['strainer_overflow_price']}*1.07)/.6',num_format)
+                worksheet.write(f'E{line}',f'=B{line}*D{line}',num_format)
+                line +=1
+            else:
+                worksheet.write(f'B{line}',1,quantity)
+                worksheet.write(f'C{line}',f'{fixture_info['bath']['strainer_overflow_color'].upper()} WASTE AND OVERFLOW')
+                worksheet.write(f'D{line}',f'=({fixture_info['bath']['strainer_overflow_price']}*1.07)/.6',num_format)
+                worksheet.write(f'E{line}',f'=B{line}*D{line}',num_format)
+                line +=1
 
-        else:
+        if bathrooms[i]['name'].upper() == 'POWDER ROOM':
             # lavatory
             # if pedestal
             if bathrooms[i]['pedestal'] == "Y":
