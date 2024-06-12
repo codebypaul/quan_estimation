@@ -5,7 +5,7 @@ red_cedar = {
     'fixt_brand':'Moen',
     'markup':.7,
     'base_trap_price':480,
-    'house_color':'',
+    'house_color':'Chrome',
     'kitchen':{
         'kitchen_coll':'INTERGRA',
         'kitchen_color':'Chrome',
@@ -13,10 +13,10 @@ red_cedar = {
         'kitchen_faucet_price':319.25,
         'garbage_disposal':'BADGER 1 DISPOSAL 1/3 HP WITH CORD - 79880A-ISE',
         'garbage_disposal_price':85,
-
     },
     'bath':{
-        'bath_coll':'',
+        'bath_coll':'Chateau',
+        'brand':'Sterling',
         'closet':{
             'closet':'GERBER VIPER',
             'closet_bowl':'21-928 WHITE ELONGATED COMFORT HEIGHT BOWL',
@@ -36,6 +36,7 @@ red_cedar = {
             'lav_faucet_price':217.05,
         },
         'shower':{
+            'shower_coll':'Medley',
             'shower_base':'72331100-0',
             'shower_base_cost':244.51,
             'shower_back_wall':'72432100-0',
@@ -51,24 +52,27 @@ red_cedar = {
             'shower_trim_cost':50.05,
         },
         'ts':{
+            'ts_coll':'Medley',
             'tub':'71171112 OR 22',
             'tub_cost':226.52,
             'tub_walls':'71374100',
             'tub_walls_cost':243.29,
+
             'ts_valve':'FP62380PF',
             'ts_valve_price':168.65,
             'ts_trim_mod_num':'TL183',
             'ts_trim_cost':81.25
         },
-        'strainer_overflow':'',
+        'strainer_overflow_color':'Chrome',
+        'strainer_overflow_price':0,
     },
     'other':{
         'water_heater':'STATE EN650DORT 50-GALLON ELECTRIC WATER HEATER',
         'water_heater_cost':425,
         'water_heater_labor':100,
         'water_heater_location':'',
-        'sewer_line':30,
-        'water_line':30
+        'sewer_line':40,
+        'water_line':40
     },
 }
 builders.append(red_cedar) # 0
@@ -78,18 +82,18 @@ kb_homes = {
     'fixt_brand':'Moen',
     'markup':.7,
     'base_trap_price':500,
-    'house_color':'',
+    'house_color':'Chrome',
     'kitchen':{
-        'kitchen_coll':'',
-        'kitchen_color':'',
+        'kitchen_coll':'Method',
+        'kitchen_color':'Chrome',
         'kitchen_faucet_mod_num':'7585C',
         'kitchen_faucet_price':262.8,
         'garbage_disposal':'GX PRO 1/3 DISPOSAL WITH CORD - GXP33C',
-        'garbage_disposal_price':126.4,
-
+        'garbage_disposal_price':69.52,
     },
     'bath':{
-        'bath_coll':'',
+        'bath_coll':'Seena',
+        'brand':'Sterling',
         'closet':{
             'closet':'KHOLER HIGHLINE',
             'closet_bowl':'K-5297-0 WHITE ELONGATED COMFORT HEIGHT BOWL',
@@ -109,6 +113,7 @@ kb_homes = {
             'lav_faucet_price':156.75,
         },
         'shower':{
+            'shower_coll':'Medley',
             'shower_base':'72331100-0',
             'shower_base_cost':244.51,
             'shower_back_wall':'72432100-0',
@@ -124,22 +129,27 @@ kb_homes = {
             'shower_trim_cost':64.04,
         },
         'ts':{
+            'ts_coll':'Medley',
             'tub':'71171112 OR 22',
             'tub_cost':226.52,
             'tub_walls':'71374100',
             'tub_walls_cost':243.29,
+
             'ts_valve':'FP62380PF',
             'ts_valve_price':168.65,
             'ts_trim_mod_num':'T5153EP',
             'ts_trim_cost':91.41
         },
-        'strainer_overflow':'',
+        'strainer_overflow_color':'Chrome',
+        'strainer_overflow_price':0,
     },
     'other':{
         'water_heater':'STATE EN650DORT 50-GALLON ELECTRIC WATER HEATER',
         'water_heater_cost':425,
         'water_heater_labor':100,
         'water_heater_location':'',
+        'sewer_line':30,
+        'water_line':30
     },
 }
 builders.append(kb_homes) # 1
@@ -828,7 +838,6 @@ tricor = {
         'kitchen_faucet_price':444.35,
         'garbage_disposal':'MOEN DISPOSAL 1/3 HP WITH CORD - GXP33C',
         'garbage_disposal_price':69.52,
-
     },
     'bath':{
         'bath_coll':'Modern',
