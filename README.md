@@ -16,7 +16,6 @@ Materials list
 
 
 # Labor need to know
-
 - 8" CC : $20
 - Deck Mounted Tub Filler : $25
 - Pedestal Lavatory: $25

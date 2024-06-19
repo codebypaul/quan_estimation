@@ -18,7 +18,7 @@ red_cedar = {
         'bath_coll':'Chateau',
         'brand':'Sterling',
         'closet':{
-            'closet':'GERBER VIPER',
+            'closet':'GERBER MAXWELL',
             'closet_bowl':'21-928 WHITE ELONGATED COMFORT HEIGHT BOWL',
             'closet_bowl_cost':102.72,
             'closet_tank':'28-990 WHITE TANK',
@@ -27,7 +27,7 @@ red_cedar = {
             'closet_seat_cost':30.83,
         },
         'lavatory':{
-            'pedestal_lav':'Gerber Maxwell G0022504',
+            'pedestal_lav':'Gerber Viper G0023564',
             'ped_lav_bowl':'13-564 4" CC Bowl',
             'ped_lav_bowl_cost':113.42,
             'ped_lav_leg':'29-834 Pedestal Leg',
@@ -54,9 +54,9 @@ red_cedar = {
         'ts':{
             'ts_coll':'Medley',
             'tub':'71171112 OR 22',
-            'tub_cost':226.52,
+            'tub_cost':219.82,
             'tub_walls':'71374100',
-            'tub_walls_cost':243.29,
+            'tub_walls_cost':239.78,
 
             'ts_valve':'FP62380PF',
             'ts_valve_price':168.65,

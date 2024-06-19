@@ -67,7 +67,7 @@ def generate_quote(job_info,fixture_info,floors,bath_count,bathrooms):
     # project
     worksheet.write('C3',job_info['plan'].upper(),project_title)
     # date
-    worksheet.write('B5',today)
+    worksheet.write('B5',f"'{today}")
 
     worksheet.write('D5','PRICE')
     worksheet.write('E5','EXTENDED')
