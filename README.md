@@ -17,10 +17,9 @@ Materials list
 
 # Labor need to know
 - 8" CC : $20
-- Deck Mounted Tub Filler : $25
 - Pedestal Lavatory: $25
 - Soap dispenser : $15
-
+- 1" PRV " $200
 
 ### Tubs / Showers
 #### Tubs
@@ -28,6 +27,7 @@ Materials list
 - Sterling garden tub: $25
 - Sterling tub / shower unit: $30 *
 - Sterling traverse tub / shower unit : $50 *
+- Deck Mounted Tub Filler : $25
 - Wall mounted tub filler w/ valve: $175
 - Floor mounted tub filler w/ valve: $250
 - Free standing tub (Acrylic): $700
