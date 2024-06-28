@@ -38,11 +38,11 @@ red_cedar = {
         'shower':{
             'shower_coll':'Medley',
             'shower_base':'72331100-0',
-            'shower_base_cost':244.51,
+            'shower_base_cost':235.88,
             'shower_back_wall':'72432100-0',
-            'shower_back_wall_cost':238.72,
+            'shower_back_wall_cost':136.765,
             'shower_end_wall':'72405100-0',
-            'shower_end_wall_cost':141.77,
+            'shower_end_wall_cost':230.29,
             'shower_wall_set':'71164100-0',
             'shower_wall_set_cost':345,
 

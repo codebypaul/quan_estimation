@@ -14,7 +14,7 @@ def generate_quote(job_info,fixture_info,floors,bath_count,bathrooms):
     # Create workbook and sheet
     # workbook = xlsxwriter.Workbook(fr'/Users/paulwilliams/Work/test_folder/{job_info['builder'].upper()}/QUOTES/{job_info['plan'].upper()}.xlsx')
     workbook = xlsxwriter.Workbook(fr'C:\Users\Paul.Williams\Stancil Services\Quan Estimating - Documents\General\{fixture_info['name'].upper()}\QUOTES\{job_info['plan'].upper()}.xlsx')
-    # workbook = xlsxwriter.Workbook(fr'C:\Users\Paul.Williams\OneDrive - Stancil Services\Documents\Projects\TEST\ESTIMATING\{fixture_info['name'].upper()}\QUOTES\{job_info['plan'].upper()}.xlsx')
+ 
     worksheet = workbook.add_worksheet()
 
     # format worksheet
@@ -67,7 +67,7 @@ def generate_quote(job_info,fixture_info,floors,bath_count,bathrooms):
     # project
     worksheet.write('C3',job_info['plan'].upper(),project_title)
     # date
-    worksheet.write('B5',f"'{today}")
+    worksheet.write('B5',today)
 
     worksheet.write('D5','PRICE')
     worksheet.write('E5','EXTENDED')
