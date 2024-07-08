@@ -10,11 +10,26 @@ def collect_info():
 
 workbook = xlsxwriter.Workbook(fr'C:\Users\Paul.Williams\OneDrive - Stancil Services\Documents\Projects\TEST\Test_Book.xlsx')
 
-def create_document(workbook,bath_count):
-    quote_generator(workbook,bath_count)
+
+
+collect_info()
+job_info = {
+    'community':community,
+    'plan':project_name,
+}
+fixture_info = {}
+floors = {}
+bathrooms = {}
+
+
+def create_document(workbook,bath_count,job_info,fixture_info,floors,bathrooms):
+    # create the excel quote
+    quote_generator(workbook,bath_count,job_info,fixture_info,floors,bathrooms)
+    # create the excel materials list
     list_generator(workbook,bath_count)
     workbook.close()
 
-collect_info()
-print(bath_count)
-create_document(workbook,bath_count)
+create_document(workbook,bath_count,job_info,fixture_info,floors,bath_count,bathrooms)
+
+
+# job_info,fixture_info,floors,bath_count,bathrooms
