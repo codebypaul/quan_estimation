@@ -3,5 +3,92 @@
 {% block content %}
 <div class="container-fluid">
     <h1>Spreadsheet Builder</h1>
+
+    <div class="row">
+        <div class="col">
+            <form>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Select a Builder</option>
+                    <option value="1">One</option>
+                    
+                </select>
+
+                <h2 class="text-center">Base Materials</h2>
+                <table class="table table-bordered transparent-group">
+                    <!-- <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                      </tr>
+                    </thead> -->
+                    <tbody>
+                      <tr>
+                        <th scope="row" class="bg-transparent column_head">Material Manufacturer</th>
+                        <td class="bg-transparent">Moen</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="bg-transparent column_head">Markup</th>
+                        <td class="bg-transparent">30%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="bg-transparent column_head">Base Trap Price</th>
+                        <td class="bg-transparent">$ 480.00</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="bg-transparent column_head">Kitchen Faucet</th>
+                        <td class="bg-transparent">$ 480.00</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="bg-transparent column_head">Primary Lav Faucet</th>
+                        <td class="bg-transparent">$ 480.00</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="bg-transparent column_head">Secondary Lav Faucet</th>
+                        <td class="bg-transparent">$ 480.00</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="bg-transparent column_head">Shower Faucet</th>
+                        <td class="bg-transparent">$ 480.00</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="bg-transparent column_head">Tub and Shower Faucet</th>
+                        <td class="bg-transparent">$ 480.00</td>
+                      </tr>
+                      
+                    </tbody>
+                </table>
+                <div class="row">
+                    <div class="col">
+                        <input type="radio" class="btn-check" name="options-base" id="option5" autocomplete="off" checked>
+                        <label class="btn" for="option5">Checked</label>
+    
+                        <input type="radio" class="btn-check" name="options-base" id="option6" autocomplete="off">
+                        <label class="btn" for="option6">Radio</label>
+    
+                        <input type="radio" class="btn-check" name="options-base" id="option8" autocomplete="off">
+                        <label class="btn" for="option8">Radio</label>
+                    </div>
+                </div>
+                
+
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+    </div>
 </div>
 {% endblock content %}

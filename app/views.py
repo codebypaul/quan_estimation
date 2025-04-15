@@ -13,6 +13,12 @@ def hello_world(request):
 def estimate_form(request):
     return render(request,'forms/estimate_form.html',context={},status=200)
 
+def spreadsheet_builder_form(request):
+    context={
+
+    }
+    return render(request,'forms/spreadsheet_builder_form.html',context=context,status=200)
+
 # pricing
 def builder_info(request):
     context={}
@@ -23,3 +29,15 @@ def manufacturer_pricing(request):
         'manufacturer': 'Moen' 
     }
     return render(request,'pricing/manufacturer_pricing.html',context=context,status=200)
+
+def china_and_tubs(request):
+    context={
+
+    }
+    return render(request,'info/china_tubs.html',context=context,status=200)
+
+def labor_costs(request):
+    context={
+        
+    }
+    return render(request,'info/labor_pricing.html',context=context,status=200)
