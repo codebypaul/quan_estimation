@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container-fluid">
+
+    <div class="row p-3">
+        
+        <div class="col">
+            <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off">
+            <label class="btn" for="option1">Delta</label>
+    
+            <input type="radio" class="btn-check" name="options" id="option2"  autocomplete="off">
+            <label class="btn" for="option2">Moen</label>
+    
+            <!-- <input type="checkbox" class="btn-check" id="btn-check-6" autocomplete="off" disabled>
+            <label class="btn" for="btn-check-6">Disabled</label> -->
+        </div>
+    </div>
+
+    <h1 class="text-center">{{ manufacturer }} Pricing</h1>
+
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Part #" aria-label="Part #" aria-describedby="button-addon2">
+        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+      </div>
+</div>
+{% endblock content %}

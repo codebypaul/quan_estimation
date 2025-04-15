@@ -13,7 +13,8 @@ def generate_quote(job_info,fixture_info,floors,bath_count,bathrooms):
 
     # Create workbook and sheet
     # workbook = xlsxwriter.Workbook(fr'/Users/paulwilliams/Work/test_folder/{job_info['builder'].upper()}/QUOTES/{job_info['plan'].upper()}.xlsx')
-    workbook = xlsxwriter.Workbook(fr'C:\Users\Paul.Williams\Stancil Services\Quan Estimating - Documents\General\{fixture_info['name'].upper()}\QUOTES\{job_info['plan'].upper()}.xlsx')
+    # workbook = xlsxwriter.Workbook(fr'C:\Users\Paul.Williams\Stancil Services\Quan Estimating - Documents\General\{fixture_info['name'].upper()}\QUOTES\{job_info['plan'].upper()}.xlsx')
+    workbook = xlsxwriter.Workbook(fr'C:\Users\paul.williams\OneDrive - Stancil Services\Documents\TEST\BUILDERS\{fixture_info['name'].upper()}\QUOTES\{job_info['plan'].upper()}.xlsx')
  
     worksheet = workbook.add_worksheet()
 

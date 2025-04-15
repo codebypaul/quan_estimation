@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container-fluid">
+    
+    <div class="row">
+        <div class="col">
+            <h6>Product</h6>
+            <input type="radio" class="btn-check" name="manufacturer" id="man_option1" autocomplete="off">
+            <label class="btn" for="man_option1">Delta</label>
+    
+            <input type="radio" class="btn-check" name="manufacturer" id="man_option2"  autocomplete="off">
+            <label class="btn" for="man_option2">Moen</label>
+        </div>
+
+        <div class="col">
+            <h6>Builder Type</h6>
+
+            <input type="radio" class="btn-check" name="builder_type" id="build_option1" autocomplete="off">
+            <label class="btn" for="build_option1">Production</label>
+    
+            <input type="radio" class="btn-check" name="builder_type" id="build_option2"  autocomplete="off">
+            <label class="btn" for="build_option2">Custom</label>
+        </div>
+
+        <!-- <div class="col">
+            <input type="radio" class="btn-check" name="manufacturer" id="man_option1" autocomplete="off">
+            <label class="btn" for="man_option1">Clear Filters</label>
+        </div> -->
+    </div>
+    
+    <h1 class="text-center">Builder Info</h1>
+
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Builder</th>
+                    <th scope="col">Product</th>
+                    <th scope="col">Base Trap Cost</th>
+                    <th scope="col">Mark Up</th>
+                    <th scope="col">Builder Type</th>
+                  </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+        </div>
+    </div>
+
+</div>
+{% endblock content %}
