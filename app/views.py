@@ -19,11 +19,16 @@ def spreadsheet_builder_form(request):
     }
     return render(request,'forms/spreadsheet_builder_form.html',context=context,status=200)
 
-# pricing
+
 def builder_info(request):
     context={}
     return render(request,'info/builder_info.html',context=context,status=200)
 
+def builder_info_form(request):
+    context={}
+    return render(request,'forms/builder_info_form.html',context=context,status=200)
+
+# pricing
 def manufacturer_pricing(request):
     context = {
         'manufacturer': 'Moen' 
