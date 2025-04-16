@@ -41,7 +41,7 @@ class Delta(models.Model):
     description = models.CharField(null=True,blank=True)
     finish = models.CharField(null=True,blank=True)
     list_price = models.FloatField(null=True,blank=True)
-    product_image = models.URLField(blank=True,null=True)
+    product_image = models.URLField(max_length=500,blank=True,null=True)
     effective_date = models.DateField(blank=True,null=True)
 
 # China Tubs and Showers

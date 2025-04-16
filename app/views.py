@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.core.paginator import Paginator
 
 from .models import Builder,Moen,Delta
 # Create your views here.
@@ -36,10 +37,23 @@ def builder_info_form(request):
 # pricing
 def manufacturer_pricing(request):
     moen_catalog = Moen.objects.all()
+    moen_paginator = Paginator(moen_catalog,20)
+    moen_page_num = request.GET.get('page')
+    moen_page_obj = moen_paginator.get_page(moen_page_num)
+
     delta_catalog = Delta.objects.all()
+    delta_paginator = Paginator(delta_catalog,20)
+    delta_page_num = request.GET.get('page')
+    delta_page_obj = delta_paginator.get_page(delta_page_num)
+
+    page_number = request.GET.get('page')
+    
+
     context = {
         'moen_catalog':moen_catalog,
+        'moen_page_obj':moen_page_obj,
         'delta_catalog':delta_catalog,
+        'delta_page_obj':delta_page_obj,
     }
     return render(request,'pricing/manufacturer_pricing.html',context=context,status=200)
 

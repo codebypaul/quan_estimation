@@ -1,8 +1,8 @@
 body{
     background-image: url('../static/images/angle_pattern_blue.png');
-    background-size: cover;
+    background-size: 50% auto;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-color: #d7d2cb;
 }
 .navbar {
@@ -20,9 +20,18 @@ body{
 .table{
     border-color: #18355d; 
 }
+tr{
+    max-height: 50px;
+}
 .column_head{
     width: 40%;
 }
 .table-row{
     cursor: pointer;
+}
+.table-img{
+    max-height: 10px;
+    height: auto;
+    width: auto;
+    object-fit: contain;
 }

@@ -6,11 +6,11 @@
     <div class="row p-3">
         
         <div class="col">
-            <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off">
-            <label class="btn" for="option1">Delta</label>
+            <input type="radio" class="btn-check" name="options" id="delta" checked autocomplete="off">
+            <label class="btn" for="delta">Delta</label>
     
-            <input type="radio" class="btn-check" name="options" id="option2"  autocomplete="off">
-            <label class="btn" for="option2">Moen</label>
+            <input type="radio" class="btn-check" name="options" id="moen"  autocomplete="off">
+            <label class="btn" for="moen">Moen</label>
     
             <!-- <input type="checkbox" class="btn-check" id="btn-check-6" autocomplete="off" disabled>
             <label class="btn" for="btn-check-6">Disabled</label> -->
@@ -29,19 +29,29 @@
             <table class="table transparent-group">
                 <thead>
                   <tr>
-                    <th scope="col" class="bg-transparent">#</th>
-                    <th scope="col" class="bg-transparent">First</th>
-                    <th scope="col" class="bg-transparent">Last</th>
-                    <th scope="col" class="bg-transparent">Handle</th>
+                    <th scope="col" class="bg-transparent">Product Image</th>
+                    <th scope="col" class="bg-transparent">Model Number</th>
+                    <th scope="col" class="bg-transparent">Material Type</th>
+                    <th scope="col" class="bg-transparent">Collection</th>
+                    <th scope="col" class="bg-transparent">Description</th>
+                    <th scope="col" class="bg-transparent">Finish</th>
+                    <th scope="col" class="bg-transparent">List Price</th>
                   </tr>
                 </thead>
                 <tbody class="table-group-divider">
-                  <tr>
-                    <th scope="row" class="bg-transparent">1</th>
-                    <td class="bg-transparent">Mark</td>
-                    <td class="bg-transparent">Otto</td>
-                    <td class="bg-transparent">@mdo</td>
+                  {% for item in delta_page_obj %}
+                  <tr class="table-row">
+                    <td class="bg-transparent table-img"> 
+                      <img src="{{item.product_image}}" alt="{{item.collection}} {{item.finish}} - {{item.material_type}}">
+                    </td>
+                    <th scope="row" class="bg-transparent">{{item.model_number}}</th>
+                    <td class="bg-transparent">{{item.material_type}}</td>
+                    <td class="bg-transparent">{{item.collection}}</td>
+                    <td class="bg-transparent">{{item.description}}</td>
+                    <td class="bg-transparent">{{item.finish}}</td>
+                    <td class="bg-transparent">{{item.list_price}}</td>
                   </tr>
+                  {% endfor %}
                 </tbody>
               </table>
         </div>
