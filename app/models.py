@@ -25,22 +25,22 @@ class Builder(models.Model):
 # Moen
 class Moen(models.Model):
     model_number = models.CharField(primary_key=True)
-    material_type = models.CharField()
+    material_type = models.CharField(null=True,blank=True)
     collection = models.CharField(null=True, blank=True)
-    description = models.CharField()
-    finish = models.CharField()
-    list_price = models.FloatField()
+    description = models.CharField(null=True,blank=True)
+    finish = models.CharField(null=True,blank=True)
+    list_price = models.FloatField(null=True,blank=True)
     product_image = models.URLField(blank=True,null=True)
     effective_date = models.DateField(blank=True,null=True)
 
 # Delta
 class Delta(models.Model):
     model_number = models.CharField(primary_key=True)
-    material_type = models.CharField()
+    material_type = models.CharField(null=True,blank=True)
     collection = models.CharField(null=True, blank=True)
-    description = models.CharField()
-    finish = models.CharField()
-    list_price = models.FloatField()
+    description = models.CharField(null=True,blank=True)
+    finish = models.CharField(null=True,blank=True)
+    list_price = models.FloatField(null=True,blank=True)
     product_image = models.URLField(blank=True,null=True)
     effective_date = models.DateField(blank=True,null=True)
 

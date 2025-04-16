@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from .models import Builder
+from .models import Builder,Moen,Delta
 # Create your views here.
 
 def hello_world(request):
@@ -35,8 +35,11 @@ def builder_info_form(request):
 
 # pricing
 def manufacturer_pricing(request):
+    moen_catalog = Moen.objects.all()
+    delta_catalog = Delta.objects.all()
     context = {
-        'manufacturer': 'Moen' 
+        'moen_catalog':moen_catalog,
+        'delta_catalog':delta_catalog,
     }
     return render(request,'pricing/manufacturer_pricing.html',context=context,status=200)
 
