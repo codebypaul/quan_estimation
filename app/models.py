@@ -14,7 +14,8 @@ class Builder(models.Model):
     closet = models.CharField(null=True, blank=True)
     closet_seat = models.CharField(null=True, blank=True)
     pedestal_lav = models.CharField(null=True, blank=True)
-    base_lav_faucet = models.CharField(null=True, blank=True)
+    base_pri_lav_faucet = models.CharField(null=True, blank=True)
+    base_sec_lav_faucet = models.CharField(null=True, blank=True)
     base_shower_trim = models.CharField(null=True, blank=True)
     base_ts_trim = models.CharField(null=True, blank=True)
     water_heater = models.CharField(null=True, blank=True)
@@ -29,6 +30,8 @@ class Moen(models.Model):
     description = models.CharField()
     finish = models.CharField()
     list_price = models.FloatField()
+    product_image = models.URLField(blank=True,null=True)
+    effective_date = models.DateField(blank=True,null=True)
 
 # Delta
 class Delta(models.Model):
@@ -38,6 +41,8 @@ class Delta(models.Model):
     description = models.CharField()
     finish = models.CharField()
     list_price = models.FloatField()
+    product_image = models.URLField(blank=True,null=True)
+    effective_date = models.DateField(blank=True,null=True)
 
 # China Tubs and Showers
 class ChinaParts(models.Model):

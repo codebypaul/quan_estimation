@@ -52,15 +52,16 @@
                   </tr>
                 </thead>
                 <tbody class="table-group-divider">
+                  {% for builder in builders %}
                   <tr onclick="window.location.href= '{% url 'builder_info_form' %}';" class="table-row">
-                    <th scope="row" class="bg-transparent">1</th>
-                    <td class="bg-transparent">Red Cedar</td>
-                    <td class="bg-transparent">Moen</td>
-                    <td class="bg-transparent">$ 480.00</td>
+                    <th scope="row" class="bg-transparent">{{builder.id}}</th>
+                    <td class="bg-transparent">{{builder.name}}</td>
+                    <td class="bg-transparent">{{builder.fixt_brand}}</td>
+                    <td class="bg-transparent">$ {{builder.base_trap_price}}.00</td>
                     <td class="bg-transparent">30%</td>
                     <td class="bg-transparent">Production</td>
                   </tr>
-                  
+                  {% endfor %}
                 </tbody>
               </table>
         </div>

@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+
+from .models import Builder
 # Create your views here.
 
 def hello_world(request):
@@ -21,7 +23,10 @@ def spreadsheet_builder_form(request):
 
 
 def builder_info(request):
-    context={}
+    builders = Builder.objects.all()
+    context={
+        'builders':builders,
+    }
     return render(request,'info/builder_info.html',context=context,status=200)
 
 def builder_info_form(request):
